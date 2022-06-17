@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Rain</title>
+    </head>
+    <body>
+
+        <!-- BEGIN FIELD MARKUP -->
+
+        <!-- Note: field markup subject to change as app develops -->
+        <div id="backdrop"></div>
+
+        <div id="canvas">
+
+            <div id="menu">
+                <div id="menu-title">The Oracle of Mana</div>
+                <div id="menu-options">
+                    <button class="btn-menu-option">Help</button>
+                </div>
+            </div>
+
+            <div id="player">
+                <div id="name">Player</div>
+            </div>
+
+        </div>
+        <!-- END FIELD MARKUP -->
+
+        <!-- BEGIN SCRIPTS -->
+        <script src="game.js"></script>
+        <script type="text/javascript">
+
+            // ONLOAD: run this code whenever the page is loaded.
+            (function() {
+                document.addEventListener('keydown', Input);
+            })();
+
+            // Start the game.
+            Game.Start();
+
+            // MOVE: pass the keydown event to the Controls
+            function Input(event)
+            {
+                Controls.Input(event);
+            }
+
+        </script>
+        <!-- END SCRIPTS -->
+
+    </body>
+
+</html>
